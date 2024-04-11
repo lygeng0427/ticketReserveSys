@@ -1,0 +1,47 @@
+<form action="/allTickets" method="GET">
+    <label for="departure">Departure from:</label>
+    <input type="text" id="departure" name="departure">
+
+    <label for="arrival">Arrival at:</label>
+    <input type="text" id="arrival" name="arrival">
+
+    <label for="departureDate">Departure Date:</label>
+    <input type="date" id="departureDate" name="departureDate">
+
+    <label for="price">Price lower than:</label>
+    <input type="number" id="price" name="price">
+
+    <button type="submit">Search</button>
+</form>
+
+
+<h1>All Flights</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Flight Number</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Departure Date</th>
+            <th>Arrival Date</th>
+            <th>Price</th>
+            <th>Buy?</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each flights}}
+        <tr>
+            <td>{{flightNum}}</td>
+            <td>{{departure}}</td>
+            <td>{{arrival}}</td>
+            <td>{{departureDate}}</td>
+            <td>{{arrivalDate}}</td>
+            <td>{{price}}</td>
+            <td><input type="radio" name="buyThis" id="buyThis" value={{flightNum}}></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<button id="buyConfirmation">Buy Selected Flight</button>
+<script src="main.js"></script>

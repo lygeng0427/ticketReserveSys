@@ -1,0 +1,30 @@
+<h1>My Tickets</h1>
+<table id="myTickets">
+    <thead>
+        <tr>
+            <th>Flight Number</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Departure Date</th>
+            <th>Arrival Date</th>
+            <th>Price</th>
+            <th>Cancel?</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each tickets}}
+        <tr id={{flightNum}}>
+            <td>{{flightNum}}</td>
+            <td>{{departure}}</td>
+            <td>{{arrival}}</td>
+            <td>{{departureDate}}</td>
+            <td>{{arrivalDate}}</td>
+            <td>{{price}}</td>
+            <td><input type="radio" name="cancelThis" id="cancelThis" value={{flightNum}}></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<button id="cancelConfirmation">Cancel Selected Flight</button>
+<script src="cancel.js"></script>
