@@ -83,8 +83,6 @@ Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia
     * I'm going to be using timestamp in js to record the departure time and arrival time of a flight
 * (1 point) Operators(i.e. less than or equal to) that are used to retrieve data from MongoDB
 
-10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit)
-
 
 ## [Link to Initial Main Project File](app.mjs) 
 
